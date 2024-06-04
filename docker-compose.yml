@@ -1,26 +1,6 @@
-version: '3.8'
-
-services:
-  web:
-    image: rayeez/notes-app:latest
-    command: python manage.py runserver 0.0.0.0:8000
-    volumes:
-      - .:/app
-    ports:
-      - "8000:8000"
-    environment:
-      - DJANGO_SETTINGS_MODULE=notesapp.settings
-    depends_on:
-      - db
-
-  db:
-    image: postgres:13
-    volumes:
-      - postgres_data:/var/lib/postgresql/data
-    environment:
-      POSTGRES_DB: notesapp
-      POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: password
-
-volumes:
-  postgres_data:
+version : "3.3"
+services :
+  web :
+     image : rayeez/notes-app:latest
+     ports :
+         - "8000:8000"
