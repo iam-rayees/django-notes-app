@@ -1,6 +1,7 @@
 version : "3.3"
 services :
   web :
-     image : rayeez/notes-app:latest
+    build:
+      context: .
      ports :
-         - "8001:8000"
+         - "8000:8000"
