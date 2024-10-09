@@ -24,7 +24,7 @@ pipeline{
         stage("Build"){
             steps{
                 script{
-                    docker_biuld("todo-app","latest","rayeez")
+                    docker_biuld("notes-todo-app","latest","rayeez")
                 }
             }
         }
@@ -38,7 +38,7 @@ pipeline{
         stage("Push"){
             steps{
                 script{
-                    docker_push("todo-app","latest","rayeez")
+                    docker_push("notes-todo-app","latest","rayeez")
                 }
             }
         }
